@@ -237,9 +237,9 @@
             <h2 class="section-title">2. Detalle por Caso</h2>
 
             <div class="tabs">
-                <div class="tab active" onclick="switchTab(event, 'tab-ok')">✅ No son error (8)</div>
-                <div class="tab" onclick="switchTab(event, 'tab-error')">🔴 Error real (9)</div>
-                <div class="tab" onclick="switchTab(event, 'tab-other')">🟡 Otros (5)</div>
+                <div class="tab active" onclick="switchTab(event, 'tab-ok')">✅ No son error (10)</div>
+                <div class="tab" onclick="switchTab(event, 'tab-error')">🔴 Error real (15)</div>
+                <div class="tab" onclick="switchTab(event, 'tab-other')">🟡 Otros (15)</div>
             </div>
 
             <div id="tab-ok" class="tab-content active">
@@ -254,14 +254,16 @@
                     <table>
                         <thead><tr><th>OT</th><th>Novedad reportada</th><th>Realidad verificada</th></tr></thead>
                         <tbody>
-                            <tr><td>541138, 541105</td><td>Queda en verde pero en PC sale en técnico asignado</td><td><span class="badge badge-success">OTs reportadas exitosamente, cuentan con reporte</span></td></tr>
-                            <tr><td>547654</td><td>No se evidencia cargue de información</td><td><span class="badge badge-success">OT tiene evidencia. Regla: solo Dx y Ex heredan fotos</span></td></tr>
-                            <tr><td>547657</td><td>No se evidencia registro fotográfico</td><td><span class="badge badge-success">Misma regla de herencia de fotos</span></td></tr>
-                            <tr><td>540166</td><td>Sube todo pero sigue abierto</td><td><span class="badge badge-success">OT reportada exitosamente desde el app</span></td></tr>
-                            <tr><td>540256</td><td>Sube todo pero sigue abierto</td><td><span class="badge badge-success">OT reportada exitosamente desde el app</span></td></tr>
-                            <tr><td>540248</td><td>Sube todo pero sigue abierto</td><td><span class="badge badge-success">OT reportada exitosamente desde el app</span></td></tr>
-                            <tr><td>546852</td><td>Sube todo pero sigue abierto</td><td><span class="badge badge-success">OT reportada exitosamente desde el app</span></td></tr>
-                            <tr><td>547044</td><td>"Error al enviar el servicio"</td><td><span class="badge badge-success">OT cuenta con reporte y evidencias</span></td></tr>
+                            <tr><td>541138</td><td>Técnico cierra desde Fácil Pro, queda en verde pero en PC sale en técnico asignado</td><td><span class="badge badge-success">OT reportada exitosamente por la app, cuenta con reporte</span></td></tr>
+                            <tr><td>541105</td><td>Técnico cierra desde Fácil Pro, queda en verde pero en PC sale en técnico asignado</td><td><span class="badge badge-success">OT reportada exitosamente por la app, cuenta con reporte</span></td></tr>
+                            <tr><td>547654</td><td>No se evidencia el cargue de información en el equipo del técnico</td><td><span class="badge badge-success">OT tiene evidencia y se reportó por la app. Regla: solo Dx y Ex heredan fotos</span></td></tr>
+                            <tr><td>547657</td><td>No se evidencia registro fotográfico desde la aplicación</td><td><span class="badge badge-success">Misma regla de herencia de fotos (solo Dx→Ex)</span></td></tr>
+                            <tr><td>540166</td><td>El técnico sube todo pero le aparece cerrado y sigue abierto</td><td><span class="badge badge-success">OT reportada exitosamente desde el app</span></td></tr>
+                            <tr><td>540256</td><td>El técnico sube todo pero le aparece cerrado y sigue abierto</td><td><span class="badge badge-success">OT reportada exitosamente desde el app</span></td></tr>
+                            <tr><td>540248</td><td>El técnico sube todo pero le aparece cerrado y sigue abierto</td><td><span class="badge badge-success">OT reportada exitosamente desde el app</span></td></tr>
+                            <tr><td>546852</td><td>El técnico sube todo pero le aparece cerrado y sigue abierto</td><td><span class="badge badge-success">OT reportada exitosamente desde el app</span></td></tr>
+                            <tr><td>546694</td><td>El técnico sube todo pero le aparece cerrado y sigue abierto</td><td><span class="badge badge-success">OT reportada exitosamente desde el app (tuvo MDSB-1028776)</span></td></tr>
+                            <tr><td>547044</td><td>"Error al enviar el servicio" — no sube información ni actualiza estado</td><td><span class="badge badge-success">OT cuenta con reporte y evidencias a través del app</span></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -272,14 +274,21 @@
                     <table>
                         <thead><tr><th>OT</th><th>Novedad</th><th>Ticket MDSB</th><th>Causa técnica</th></tr></thead>
                         <tbody>
-                            <tr><td>533438</td><td>Fotos no se evidencian, app pegada</td><td><span class="badge badge-danger">MDSB-1012329</span></td><td>Timeout 7+ min en actarcser</td></tr>
-                            <tr><td>521541</td><td>Fotos no se evidencian, app pegada</td><td><span class="badge badge-gray">Sin reporte</span></td><td>Mismo timeout</td></tr>
-                            <tr><td>533443</td><td>App pegada, archivos se borran</td><td><span class="badge badge-danger">MDSB-1012329</span></td><td>Timeout + sin transaccionalidad</td></tr>
-                            <tr><td>546398</td><td>Diagnóstico se borró al cargar</td><td><span class="badge badge-danger">MDSB-1022494</span></td><td>Reporte parcial por desconexión</td></tr>
-                            <tr><td>532461</td><td>Se borraron fotos y acta</td><td><span class="badge badge-danger">MDSB-1025203</span></td><td>Falla S3 upload (HTTP 500)</td></tr>
-                            <tr><td>547494, 547598, 547234</td><td>Se cerró sin adjuntos / sin acta</td><td><span class="badge badge-danger">MDSB-1026374</span></td><td>Pipeline de evidencias falló</td></tr>
-                            <tr><td>546668</td><td>Queda en verde pero no se envían</td><td><span class="badge badge-danger">MDSB-1026897</span></td><td>Reporte fantasma (JSON corrupto)</td></tr>
-                            <tr><td>545463, 547693, 549047</td><td>"Error al enviar el servicio"</td><td><span class="badge badge-danger">MDSB-1036790</span></td><td>NullReferenceException en backend</td></tr>
+                            <tr><td>533438</td><td>Fotos no se evidencian en la OTT, app se queda pegada en técnico asignado</td><td><span class="badge badge-danger">MDSB-1012329</span></td><td>Timeout 7+ min en actarcser</td></tr>
+                            <tr><td>521541</td><td>Fotos no se evidencian en la OTT, app se queda pegada en técnico asignado</td><td><span class="badge badge-gray">Sin reporte</span></td><td>Mismo timeout</td></tr>
+                            <tr><td>533443</td><td>App se queda pegada con todos los archivos, se borran al cerrar manualmente</td><td><span class="badge badge-danger">MDSB-1012329</span></td><td>Timeout + sin transaccionalidad</td></tr>
+                            <tr><td>546398</td><td>Diagnóstico se borró al culminar rutina y realizar cargue final</td><td><span class="badge badge-danger">MDSB-1022494</span></td><td>Reporte parcial por desconexión</td></tr>
+                            <tr><td>532461</td><td>El servicio se le borraron las fotos y el acta</td><td><span class="badge badge-danger">MDSB-1025203</span></td><td>Falla S3 upload (HTTP 500)</td></tr>
+                            <tr><td>532458</td><td>El servicio se cerró y se le borraron las fotos y el acta</td><td><span class="badge badge-gray">Sin reporte</span></td><td>Falla S3 upload</td></tr>
+                            <tr><td>547494</td><td>Se cerró el servicio sin adjuntos</td><td><span class="badge badge-danger">MDSB-1026374</span></td><td>Pipeline de evidencias falló</td></tr>
+                            <tr><td>547598</td><td>Se cerró el servicio y no sale el acta</td><td><span class="badge badge-danger">MDSB-1026374</span></td><td>Acta no se generó/subió</td></tr>
+                            <tr><td>547234</td><td>El servicio se cerró, no cargó evidencias</td><td><span class="badge badge-danger">MDSB-1026374</span></td><td>Pipeline de evidencias falló</td></tr>
+                            <tr><td>546668</td><td>Se envía la orden de reporte, queda en verde pero no se envían los reportes</td><td><span class="badge badge-danger">MDSB-1026897</span></td><td>Reporte fantasma (JSON corrupto en BD)</td></tr>
+                            <tr><td>545463</td><td>"Error al enviar el servicio" + mensaje en inglés sobre referencia del objeto</td><td><span class="badge badge-danger">MDSB-1036790</span></td><td>NullReferenceException en backend</td></tr>
+                            <tr><td>547693</td><td>"Error al enviar el servicio" — no sube información ni actualiza estado</td><td><span class="badge badge-danger">MDSB-1036790</span></td><td>NullReferenceException en backend</td></tr>
+                            <tr><td>549047</td><td>"Error al enviar el servicio" — no sube información ni actualiza estado</td><td><span class="badge badge-danger">MDSB-1036790</span></td><td>NullReferenceException en backend</td></tr>
+                            <tr><td>540241</td><td>Al técnico le sale cerrado en el celular, subió evidencias, pero sale en técnico asignado</td><td><span class="badge badge-danger">MDSB-1024215</span></td><td>Estado inconsistente — workaround manual aplicado</td></tr>
+                            <tr><td>547878</td><td>No se deja cerrar la OTT</td><td><span class="badge badge-danger">MDSB-1029481</span></td><td>Error al cerrar OT</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -290,11 +299,21 @@
                     <table>
                         <thead><tr><th>OT</th><th>Novedad</th><th>Clasificación</th><th>Detalle</th></tr></thead>
                         <tbody>
-                            <tr><td>528091 + 9 más</td><td>Finalizada en campo no cambia estado</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Cierre masivo (MDSB-1000966) rompió flujo. Pendiente respuesta de gerencia.</td></tr>
-                            <tr><td>540241</td><td>App muestra cerrado pero sigue abierto</td><td><span class="badge badge-purple">Workaround</span></td><td>MDSB-1024215 — intervención manual</td></tr>
-                            <tr><td>539177</td><td>Fecha incorrecta al marcar llegada</td><td><span class="badge badge-purple">Workaround</span></td><td>Bug DateTime.Parse() sin CultureInfo</td></tr>
-                            <tr><td>540206, 540242, 540238</td><td>Reportadas por web con error</td><td><span class="badge badge-gray">Sin reporte Jira</span></td><td>No fueron por app móvil</td></tr>
-                            <tr><td>528521</td><td>Fotos no se evidencian</td><td><span class="badge badge-gray">Sin reporte</span></td><td>Falla histórica, sin ticket</td></tr>
+                            <tr><td>528091</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Cierre masivo (MDSB-1000966) rompió flujo automático. Pendiente respuesta de gerencia.</td></tr>
+                            <tr><td>528154</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Mismo caso — cierre masivo</td></tr>
+                            <tr><td>528167</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Mismo caso — cierre masivo</td></tr>
+                            <tr><td>528184</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Mismo caso — cierre masivo</td></tr>
+                            <tr><td>528200</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Mismo caso — cierre masivo</td></tr>
+                            <tr><td>528422</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Mismo caso — cierre masivo</td></tr>
+                            <tr><td>528423</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Mismo caso — cierre masivo</td></tr>
+                            <tr><td>528432</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Mismo caso — cierre masivo</td></tr>
+                            <tr><td>528435</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Mismo caso — cierre masivo</td></tr>
+                            <tr><td>529767</td><td>Finalizada en campo no cambia estado, recepción cerrada</td><td><span class="badge badge-warning">Regla de negocio</span></td><td>Mismo caso — cierre masivo</td></tr>
+                            <tr><td>539177</td><td>Fecha incorrecta al marcar llegada a sitio, no deja cerrar</td><td><span class="badge badge-purple">Sin reporte — Workaround</span></td><td>Bug DateTime.Parse() sin CultureInfo</td></tr>
+                            <tr><td>540206</td><td>Reportada por web, evidencias con error</td><td><span class="badge badge-purple">Sin reporte — Workaround</span></td><td>No fue por app móvil, supervisor cerró manual</td></tr>
+                            <tr><td>540242</td><td>Reportada por web, evidencias con error</td><td><span class="badge badge-purple">Sin reporte — Workaround</span></td><td>No fue por app móvil</td></tr>
+                            <tr><td>540238</td><td>Reportada por web, evidencias con error</td><td><span class="badge badge-purple">Sin reporte — Workaround</span></td><td>No fue por app móvil</td></tr>
+                            <tr><td>528521</td><td>Fotos no se evidencian en la OTT, app se queda pegada</td><td><span class="badge badge-purple">Sin reporte — Workaround</span></td><td>Falla histórica, sin ticket Jira</td></tr>
                         </tbody>
                     </table>
                 </div>
