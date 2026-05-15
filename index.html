@@ -479,6 +479,34 @@
                             <td>Juan Pablo Valdes</td>
                             <td>Nuevo endpoint listo</td>
                         </tr>
+                        <tr>
+                            <td><strong>GD820-7348</strong></td>
+                            <td>Ajuste MDSB-1029481 — Object reference not set</td>
+                            <td><span class="badge badge-warning">En Progreso</span></td>
+                            <td>—</td>
+                            <td>Fix NullReferenceException</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GD820-7404</strong></td>
+                            <td>Corregir error MDSB-1031172</td>
+                            <td><span class="badge badge-warning">En Progreso</span></td>
+                            <td>—</td>
+                            <td>Fix error reportado por soporte</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GD820-5417</strong></td>
+                            <td>Validación OT 546253</td>
+                            <td><span class="badge badge-gray">Backlog</span></td>
+                            <td>—</td>
+                            <td>Validación de OT específica</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GD820-7177</strong></td>
+                            <td>Implementar transaccionalidad con rollback en reportes</td>
+                            <td><span class="badge badge-gray">Backlog</span></td>
+                            <td>—</td>
+                            <td>Elimina reportes fantasma</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -510,20 +538,20 @@
             <h3 style="font-size:1rem; margin: 2rem 0 1rem; color: var(--gray-700);">Backlog estructural completo (12 HUs)</h3>
             <div class="table-wrapper">
                 <table>
-                    <thead><tr><th>HU</th><th>Título</th><th>Estado</th><th>Responsable</th><th>Fase</th></tr></thead>
+                    <thead><tr><th>HU</th><th>Título</th><th>Estado</th><th>Fase</th></tr></thead>
                     <tbody>
-                        <tr><td>GD820-7177</td><td>Transaccionalidad con rollback</td><td><span class="badge badge-gray">Backlog</span></td><td>Juan Pablo Valdes</td><td>2</td></tr>
-                        <tr><td>GD820-7192</td><td>Paralelizar sincronización + circuit breaker SIAB</td><td><span class="badge badge-gray">Backlog</span></td><td>Carlos Patino</td><td>2</td></tr>
-                        <tr><td>GD820-7193</td><td>Optimizar cambio de estado OT — timeouts SQL</td><td><span class="badge badge-gray">Backlog</span></td><td>Carlos Patino</td><td>2</td></tr>
-                        <tr><td>GD820-7381</td><td>Validación null-safe nombre archivo (.NET)</td><td><span class="badge badge-info">Por Hacer</span></td><td>Oscar Romero</td><td>2</td></tr>
-                        <tr><td>GD820-7432</td><td>Permitir envío sin evidencia + nota excepción</td><td><span class="badge badge-gray">Backlog</span></td><td>Carlos Patino</td><td>2</td></tr>
-                        <tr><td>GD820-7436</td><td>Notificar coordinador si reporte sin evidencia</td><td><span class="badge badge-gray">Backlog</span></td><td>Carlos Patino</td><td>2</td></tr>
-                        <tr><td>GD820-7444</td><td>Validar existencia archivo fotos antes de envío</td><td><span class="badge badge-gray">Backlog</span></td><td>Carlos Patino</td><td>2</td></tr>
-                        <tr><td>GD820-7512</td><td>Revisión reporte vs criterios de aceptación</td><td><span class="badge badge-info">Por Hacer</span></td><td>Julio Cesar Barbosa</td><td>2</td></tr>
-                        <tr><td>GD820-7221</td><td>Migración servicio reportes C#→Java (Strangler Fig)</td><td><span class="badge badge-info">Por Hacer</span></td><td>Carlos Patino</td><td>3</td></tr>
-                        <tr><td>GD820-7222</td><td>Migrar endpoint creación reporte a Java async</td><td><span class="badge badge-gray">Backlog</span></td><td>Carlos Patino</td><td>3</td></tr>
-                        <tr><td>GD820-7229</td><td>Migrar consulta reportes a Java/Spring Boot</td><td><span class="badge badge-gray">Backlog</span></td><td>Juan Pablo Valdes</td><td>3</td></tr>
-                        <tr><td>GD820-7338</td><td>EBA Transformación FácilPro</td><td><span class="badge badge-gray">Backlog</span></td><td>Carlos Patino</td><td>3</td></tr>
+                        <tr><td>GD820-7177</td><td>Transaccionalidad con rollback</td><td><span class="badge badge-gray">Backlog</span></td><td>2</td></tr>
+                        <tr><td>GD820-7192</td><td>Paralelizar sincronización + circuit breaker SIAB</td><td><span class="badge badge-gray">Backlog</span></td><td>2</td></tr>
+                        <tr><td>GD820-7193</td><td>Optimizar cambio de estado OT — timeouts SQL</td><td><span class="badge badge-gray">Backlog</span></td><td>2</td></tr>
+                        <tr><td>GD820-7381</td><td>Validación null-safe nombre archivo (.NET)</td><td><span class="badge badge-info">Por Hacer</span></td><td>2</td></tr>
+                        <tr><td>GD820-7432</td><td>Permitir envío sin evidencia + nota excepción</td><td><span class="badge badge-gray">Backlog</span></td><td>2</td></tr>
+                        <tr><td>GD820-7436</td><td>Notificar coordinador si reporte sin evidencia</td><td><span class="badge badge-gray">Backlog</span></td><td>2</td></tr>
+                        <tr><td>GD820-7444</td><td>Validar existencia archivo fotos antes de envío</td><td><span class="badge badge-gray">Backlog</span></td><td>2</td></tr>
+                        <tr><td>GD820-7512</td><td>Revisión reporte vs criterios de aceptación</td><td><span class="badge badge-info">Por Hacer</span></td><td>2</td></tr>
+                        <tr><td>GD820-7221</td><td>Migración servicio reportes C#→Java (Strangler Fig)</td><td><span class="badge badge-info">Por Hacer</span></td><td>3</td></tr>
+                        <tr><td>GD820-7222</td><td>Migrar endpoint creación reporte a Java async</td><td><span class="badge badge-gray">Backlog</span></td><td>3</td></tr>
+                        <tr><td>GD820-7229</td><td>Migrar consulta reportes a Java/Spring Boot</td><td><span class="badge badge-gray">Backlog</span></td><td>3</td></tr>
+                        <tr><td>GD820-7338</td><td>EBA Transformación FácilPro</td><td><span class="badge badge-gray">Backlog</span></td><td>3</td></tr>
                     </tbody>
                 </table>
             </div>
