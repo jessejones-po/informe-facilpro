@@ -340,6 +340,53 @@
                 <span style="font-size:0.85rem; color:var(--success); margin-left:1rem;">↓ 70% vs abril (1,183)</span>
             </div>
 
+            <h3 style="font-size:1rem; margin: 2rem 0 1rem; color: var(--gray-700);">📉 Variación Abril → Mayo (endpoints app móvil)</h3>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
+                <div style="background:white; border-radius:12px; padding:1.2rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); text-align:center;">
+                    <div style="font-size:0.75rem; color:var(--gray-500); text-transform:uppercase; letter-spacing:0.5px;">actarcser</div>
+                    <div style="display:flex; align-items:center; justify-content:center; gap:0.8rem; margin-top:0.5rem;">
+                        <span style="font-size:1.3rem; color:var(--gray-500); text-decoration:line-through;">392</span>
+                        <span style="font-size:1.2rem;">→</span>
+                        <span style="font-size:1.5rem; font-weight:800; color:var(--danger);">314</span>
+                    </div>
+                    <div style="margin-top:0.4rem; font-size:0.85rem; color:var(--success); font-weight:700;">↓ 20%</div>
+                </div>
+                <div style="background:white; border-radius:12px; padding:1.2rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); text-align:center;">
+                    <div style="font-size:0.75rem; color:var(--gray-500); text-transform:uppercase; letter-spacing:0.5px;">reporte/{idot}</div>
+                    <div style="display:flex; align-items:center; justify-content:center; gap:0.8rem; margin-top:0.5rem;">
+                        <span style="font-size:1.3rem; color:var(--gray-500); text-decoration:line-through;">86</span>
+                        <span style="font-size:1.2rem;">→</span>
+                        <span style="font-size:1.5rem; font-weight:800; color:var(--warning);">16</span>
+                    </div>
+                    <div style="margin-top:0.4rem; font-size:0.85rem; color:var(--success); font-weight:700;">↓ 81%</div>
+                </div>
+                <div style="background:white; border-radius:12px; padding:1.2rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); text-align:center;">
+                    <div style="font-size:0.75rem; color:var(--gray-500); text-transform:uppercase; letter-spacing:0.5px;">reporte-servicio</div>
+                    <div style="display:flex; align-items:center; justify-content:center; gap:0.8rem; margin-top:0.5rem;">
+                        <span style="font-size:1.3rem; color:var(--gray-500);">—</span>
+                        <span style="font-size:1.2rem;">→</span>
+                        <span style="font-size:1.5rem; font-weight:800; color:#f97316;">19</span>
+                    </div>
+                    <div style="margin-top:0.4rem; font-size:0.85rem; color:var(--gray-500); font-weight:700;">Nuevo endpoint</div>
+                </div>
+                <div style="background:white; border-radius:12px; padding:1.2rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); text-align:center;">
+                    <div style="font-size:0.75rem; color:var(--gray-500); text-transform:uppercase; letter-spacing:0.5px;">TOTAL APP</div>
+                    <div style="display:flex; align-items:center; justify-content:center; gap:0.8rem; margin-top:0.5rem;">
+                        <span style="font-size:1.3rem; color:var(--gray-500); text-decoration:line-through;">1,183</span>
+                        <span style="font-size:1.2rem;">→</span>
+                        <span style="font-size:1.5rem; font-weight:800; color:var(--success);">357</span>
+                    </div>
+                    <div style="margin-top:0.4rem; font-size:0.95rem; color:var(--success); font-weight:800;">↓ 70%</div>
+                </div>
+            </div>
+            <div class="callout callout-success" style="margin-bottom:0;">
+                <div class="icon">📊</div>
+                <div class="text">
+                    <strong>Tendencia positiva</strong>
+                    Los errores de la app bajaron un 70% entre abril y mayo. El endpoint más crítico (actarcser) bajó 20% y reporte/{idot} bajó 81%. Los fixes parciales desplegados están teniendo efecto. El deploy completo del 20 de mayo debería reducir aún más los errores.
+                </div>
+            </div>
+
             <h3 style="font-size:1rem; margin: 2rem 0 1rem; color: var(--gray-700);">Flujo del error (reconstruido)</h3>
             <div style="background:white; border-radius:12px; padding:1.5rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); font-family: monospace; font-size:0.82rem; line-height:1.8; overflow-x:auto;">
                 <div>1️⃣ Técnico completa checklist + captura fotos</div>
