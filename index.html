@@ -211,10 +211,14 @@
             <div class="chart-container">
                 <div class="donut-wrapper">
                     <svg viewBox="0 0 120 120">
+                        <!-- Base gris -->
                         <circle cx="60" cy="60" r="46" stroke="#e2e8f0" stroke-dasharray="289" stroke-dashoffset="0"></circle>
-                        <circle cx="60" cy="60" r="46" stroke="#10b981" stroke-dasharray="289" stroke-dashoffset="185" style="animation: fill1 1.5s ease forwards;"></circle>
-                        <circle cx="60" cy="60" r="46" stroke="#ef4444" stroke-dasharray="289" stroke-dashoffset="104" style="animation: fill2 1.5s ease 0.3s forwards;"></circle>
-                        <circle cx="60" cy="60" r="46" stroke="#f59e0b" stroke-dasharray="289" stroke-dashoffset="275" style="animation: fill3 1.5s ease 0.6s forwards;"></circle>
+                        <!-- Verde: 10/40 = 25% → dasharray=72,289 -->
+                        <circle cx="60" cy="60" r="46" stroke="#10b981" stroke-dasharray="72 289" stroke-dashoffset="0"></circle>
+                        <!-- Rojo: 15/40 = 37.5% → dasharray=108,289, offset=-72 -->
+                        <circle cx="60" cy="60" r="46" stroke="#ef4444" stroke-dasharray="108 289" stroke-dashoffset="-72"></circle>
+                        <!-- Amarillo: 15/40 = 37.5% → dasharray=108,289, offset=-180 -->
+                        <circle cx="60" cy="60" r="46" stroke="#f59e0b" stroke-dasharray="108 289" stroke-dashoffset="-180"></circle>
                     </svg>
                     <div class="donut-center">
                         <div class="big">40</div>
